@@ -29,49 +29,65 @@ let ProductosDB = []
 function getLogin(req, res) {
   if (req.isAuthenticated()) {
     var user = req.user;
-    console.log("user logueado");
-    console.log("datos login",user._id.toString())
+    //console.log("user logueado");
+    //console.log("datos login",user._id.toString())
     res.render("login-ok", {
       usuario: user.username
     });
   } else {
-    console.log("user NO logueado");
+    //console.log("user NO logueado");
     res.sendFile(path.join(__dirname,"../views/login.html"));
   }
 }
 
 function getProfile(req, res) {
-  console.log("datos login",req.user)
-  let datosnuevos = req.user
-
-  res.render("profile", datosnuevos );
+  if (req.isAuthenticated()) {
+    //console.log("datos login",req.user)
+    let datosnuevos = req.user
+    res.render("profile", datosnuevos );
+    
+  } else {
+    //console.log("user NO logueado");
+    res.sendFile(path.join(__dirname,"../views/login.html"));
+  }
 }
 
 async function getProductos(req, res) {
-  const productosArray = []
-  console.log(req.user)
-  const productos = await Products.find().lean()
-  for (let i = 0; i < productos.length; i++)
-  {
-    productosArray.push({
-      id: productos[i]._id.toString(),
-      name: productos[i].name,
-      price: productos[i].price,
-      thumbnail: productos[i].thumbnail
-    })
+  if (req.isAuthenticated()) {
+    const productosArray = []
+    //console.log(req.user)
+    const productos = await Products.find().lean()
+    for (let i = 0; i < productos.length; i++)
+    {
+      productosArray.push({
+        id: productos[i]._id.toString(),
+        name: productos[i].name,
+        price: productos[i].price,
+        thumbnail: productos[i].thumbnail
+      })
+    }
+    //console.log(productosArray)
+    res.render("productosList", {ProductosDB:productosArray} );
+  } else {
+    //console.log("user NO logueado");
+    res.sendFile(path.join(__dirname,"../views/login.html"));
   }
-  console.log(productosArray)
-  res.render("productosList", {ProductosDB:productosArray} );
 }
 
 async function getCarrito(req, res) {
-  const productosArray = []
-  console.log(req.user)
-  const usuarioid = '632cc9bf33883f520c6092c5'
+  if (req.isAuthenticated()) {
+    //console.log(req.user)
+    //const usuarioid = '632cc9bf33883f520c6092c5'
+    const usuarioid = req.user._id.toString()
 
-  const ProductosCarrito = await Carrito.find({ usuarioid: usuarioid},{ productos: 1, _id: 0 })  
-  //console.log(ProductosCarrito[0].productos)
-  res.render("productosCarrito", {ProductosDB:ProductosCarrito[0].productos} );
+    const ProductosCarrito = await Carrito.find({ usuarioid: usuarioid},{ productos: 1, _id: 0 })  
+    //console.log(ProductosCarrito[0].productos)
+    res.render("productosCarrito", {ProductosDB:ProductosCarrito[0].productos} );
+    
+  } else {
+    //console.log("user NO logueado");
+    res.sendFile(path.join(__dirname,"../views/login.html"));
+  }
 }
 
 async function postProductos (req,res)
@@ -90,8 +106,8 @@ async function postProductos (req,res)
 async function postProductosCarrito (req,res)
 {
   //console.log(req.user)
-  //const usuarioid = req.user._id.toString()
-  const usuarioid = '632cc9bf33883f520c6092c5'
+  const usuarioid = req.user._id.toString()
+  //const usuarioid = '632cc9bf33883f520c6092c5'
   const { ProductoId } = req.body
   //const ProductoExiste = await Carrito.find({ usuarioid: usuarioid, "productos.productoid": { $eq: ProductoId } }).lean()
   //const ProductoExiste = await Carrito.find({productos: {$elemMatch: {productoid:ProductoId}}})

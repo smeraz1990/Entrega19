@@ -31,7 +31,7 @@ const{nombre,direccion,edad,telefono} = req.body
             direccion,
             edad,
             telefono,
-            avatar: `${file.path}`
+            avatar: `${file.filename}`
         }
 
         //console.log("dato existente", newUser)

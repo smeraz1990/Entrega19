@@ -43,6 +43,18 @@
                     </table>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="col-md-12">
+                        <div class="col-md-3 offset-md3">
+                            <button type="button" class="btn btn-primary" onclick="goSignup()">HOME</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="redireccionar('/carrito')">CARRITO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -78,6 +90,14 @@
         },
         dataType: "json"
         });
+    }
+
+    function redireccionar(pagina) {
+      location.href = pagina;
+    }
+
+    function goSignup() {
+      redireccionar('/login');
     }
     
 </script>

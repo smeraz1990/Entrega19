@@ -2,7 +2,7 @@ import express, { application } from 'express'
 import session from "express-session"
 import passport from 'passport';
 import passportLocal from 'passport-local'
-import router from '../routes/indexrouts.js';
+//import router from '../routes/indexrouts.js';
 import path from 'path';
 import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -37,7 +37,7 @@ app.use(compression())
 fs.writeFileSync(`Messages/appMensajes.txt`,'')
 app.use(express.static(path.join(__dirname, '../views')))
 app.use(express.json());
-app.use('/', router)
+//app.use('/', router)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('avatars'))
 app.use(session({
@@ -121,8 +121,8 @@ app.post(
   routes.postSignup
 );
 
-app.get("/profile", routes.getProfile);
-app.get("/productos", routes.getProductos);
+app.get("/profile", checkAuthentication, routes.getProfile);
+app.get("/productos", checkAuthentication, routes.getProductos);
 app.get("/carrito", routes.getCarrito);
 app.post("/productos", routes.postProductos);
 app.post("/productoscarrito", routes.postProductosCarrito);
