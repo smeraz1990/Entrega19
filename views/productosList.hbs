@@ -50,7 +50,7 @@
                             <button type="button" class="btn btn-primary" onclick="goSignup()">HOME</button>
                         </div>
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-primary" onclick="redireccionar('/carrito')">CARRITO</button>
+                            <button type="button" class="btn btn-primary" onclick="redireccionar('/api/carritos')">CARRITO</button>
                         </div>
                     </div>
                 </div>
@@ -80,11 +80,9 @@
     function AgregarProductoCariito(){
       const Productoid = $(this).data("productoid")
       $.ajax({
-        method: "POST",
-        url: "/productoscarrito",
-        data: {
-            "ProductoId": Productoid
-        },
+        method: "GET",
+        url: "/api/carritos/"+Productoid,
+        data: {},
         success: function (result) {
             //console.log(result);
         },

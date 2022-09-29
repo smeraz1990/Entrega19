@@ -1,0 +1,114 @@
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'isAuthenticated')"}
+{"level":"error","message":"Ruta GET/:  ReferenceError: ProductosDB is not defined"}
+{"level":"error","message":"Ruta GET/:  ReferenceError: ProductosDB is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: producto is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd21966064a729b72519e:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd21966064a729b72519e:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd2742f4e2638bb12b2eb:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd2742f4e2638bb12b2eb:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd2742f4e2638bb12b2eb:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd2742f4e2638bb12b2eb:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: Carrito is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"server.js error login"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd2922f4e2638bb12b2ed:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd7548737649195a3e171:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632c85328737649195a3e174:  ReferenceError: Products is not defined"}
+{"level":"error","message":"Ruta GET/632bd2922f4e2638bb12b2ed:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd21966064a729b72519e:  ReferenceError: Products is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd2742f4e2638bb12b2eb:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd2922f4e2638bb12b2ed:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd7548737649195a3e171:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632c85328737649195a3e174:  ReferenceError: Products is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632c85328737649195a3e174:  ReferenceError: ProductoId is not defined"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632c85328737649195a3e174:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: carritoService.updateCarritoID is not a function"}
+{"level":"error","message":"Ruta GET/632bd1e166064a729b72519c:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta undefinedundefined:  TypeError: Cannot destructure property 'ProductoId' of 'req.params' as it is undefined."}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  TypeError: Cannot destructure property 'ProductoId' of 'req.params' as it is undefined."}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined."}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  ReferenceError: usuarioid is not defined"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  CastError: Cast to string failed for value \"{ username: 'asd@assd' }\" (type Object) at path \"username\" for model \"Users\""}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta undefinedundefined:  ReferenceError: ProductoExiste is not defined"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/login:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/login:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/login:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/login:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/login:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  ReferenceError: carritoService is not defined"}
+{"level":"error","message":"Ruta GET/:  ReferenceError: carritoService is not defined"}
+{"level":"error","message":"Ruta GET/:  ReferenceError: carritoService is not defined"}
+{"level":"error","message":"server.js error login"}
+{"level":"error","message":"server.js error login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of undefined (reading '_id')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":"Ruta GET/:  TypeError: Cannot read properties of null (reading 'user')"}
+{"level":"error","message":" Ruta POST/ error al registrar usuario"}
+{"level":"error","message":"Ruta GET/failsignup error en signup"}
+{"level":"error","message":" Ruta POST/ error al registrar usuario"}
+{"level":"error","message":"Ruta GET/failsignup error en signup"}
+{"level":"error","message":" Ruta POST/ error al registrar usuario"}
+{"level":"error","message":"Ruta GET/failsignup error en signup"}
