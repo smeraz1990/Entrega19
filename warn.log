@@ -142,3 +142,9 @@
 {"level":"error","message":"Ruta GET/failsignup error en signup"}
 {"level":"error","message":" Ruta POST/ error al registrar usuario"}
 {"level":"error","message":"Ruta GET/failsignup error en signup"}
+{"level":"warn","message":"Ruta GET/favicon.ico no existe"}
+{"level":"warn","message":"Ruta GET/api/Correo no existe"}
+{"level":"warn","message":"Ruta GET/api/correo no existe"}
+{"level":"warn","message":"Ruta GET/favicon.ico no existe"}
+{"level":"warn","message":"Ruta GET/favicon.ico no existe"}
+{"level":"warn","message":"Ruta GET/favicon.ico no existe"}

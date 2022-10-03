@@ -18,7 +18,7 @@
             </div>
             <div class="mt-3 row">
                 <div class="col-md-8 offset-md-2">
-                    <table id="gridProductosList" class="table table-dark" style="width: 100%;">
+                    <table id="gridProductosCarrito" class="table table-dark" style="width: 100%;">
                         <thead class="thead-dark">
                             <th scope="col" style="width: 25%;">Titulo</th>
                             <th scope="col" style="width: 25%;">Precio</th>
@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-envelope"></i> Solicitar Pedido</button>
+                    <button type="button" class="btn btn-primary" id="btnPedido"><i class="fa fa-envelope"></i> Solicitar Pedido</button>
                 </div>
             </div>
         </div>
@@ -68,6 +68,31 @@
 </html>
 
 <script>
+    $( document ).ready(function() {
+        Init()
+    });
+    function Init()
+    {
+        $(document).on("click","#btnPedido",SolicitarPedido)
+    }
+    function SolicitarPedido(){
+    let numeroproductos = gridProductosCarrito.rows.length
+      if(numeroproductos <= 1)
+      {
+        alert("Debe tener por lo menos un producto en carrito")
+        return
+      }
+      $.ajax({
+        method: "post",
+        url: "/api/correo",
+        data: {},
+        success: function (result) {
+            console.log(result);
+        },
+        dataType: "json"
+        });
+    }
+
     function redireccionar(pagina) {
       location.href = pagina;
     }
@@ -75,4 +100,5 @@
     function goSignup() {
       redireccionar('/login');
     }
-  </script>
+    
+</script>
