@@ -94,7 +94,7 @@ app.get("/logout", routes.getLogout);
 //  FAIL ROUTE
 app.get("*", routes.failRoute);
 
-conectarDB(config.database.dbUrl, (err) => {
+B(config.database.dbUrl, (err) => {
   if (err) return datosLogin.logger.error("server.js error en conexión de base de datos", err);
   console.log("BASE DE DATOS CONECTADA");
 })

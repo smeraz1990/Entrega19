@@ -1,6 +1,6 @@
 import logger from '../src/winstonconfig.js';
 import services from '../service/index.service.js'
-import EnvioCorreo from '../components/EmailConfig.js'
+import HerramientasEnvios from '../components/EmailConfig.js'
 
 
 const EnviarCorreo = async(req, res)=>{
@@ -40,7 +40,16 @@ const EnviarCorreo = async(req, res)=>{
         subject,
         html: htmlTable
     }
-    EnvioCorreo(mailOptions)
+
+    console.log(req.user)
+
+    const whatsOption = { 
+        body: subject, 
+        from: 'whatsapp:+14155238886',       
+        to: `whatsapp:${req.user.telefono}`
+    }
+    HerramientasEnvios.EnvioCorreo(mailOptions)
+    HerramientasEnvios.EnvioWhats(whatsOption)
     return {mensaje: "Correo Enviado"}
 
     //console.log("datos a usar para el correo:", mailOptions)

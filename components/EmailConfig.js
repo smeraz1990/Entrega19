@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import { createTransport } from 'nodemailer';
+import twilio from 'twilio'
 
 dotenv.config()
 
@@ -12,6 +13,12 @@ const trasporter = createTransport ({
         pass: process.env.PASS
     }
 })
+const accountSid = process.env.TWILIOID; 
+const authToken = process.env.TWILIOTOKEN; 
+const client = twilio(accountSid, authToken);
+
+
+
 
 async function EnvioCorreo(mailOptions) {
     try{
@@ -23,5 +30,22 @@ async function EnvioCorreo(mailOptions) {
     }
 }
 
-export default EnvioCorreo
+async function EnvioWhats(whatsOption) {
+    try{
+        const MensajeWhats = await client.messages .create(whatsOption)
+        //console.log(info)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+
+
+
+
+export default {
+    EnvioCorreo,
+    EnvioWhats
+}
 
