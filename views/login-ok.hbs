@@ -69,7 +69,7 @@
         </div>
     </div>
 </div>
-<br> 
+<br>--}}
 <div class="row">
     <div id="divFormulario" class="col-md-8 offset-md-2" style="background-color:rgba(179, 177, 177, 0.963)">
         <dv class="row">
@@ -114,7 +114,7 @@
         <br>
         <div class="row">
             <div id="divFormulario" class="col-md-8 offset-md-2">
-                <form id="messageForm">
+                <form id="messageForm" name="messageForm">
                     <div class="form-group">
                         <label for="messageInput">Message</label>
                         <input type="text" class="form-control" id="messageInput" placeholder="Message">
@@ -124,7 +124,10 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
+<script src="./socket.io/socket.io.js"></script>
+<script src="./client.socket.js"></script>
+ 
 
 <script>
     function redireccionar(pagina) {

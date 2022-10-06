@@ -112,3 +112,7 @@
 {"level":"error","message":"Ruta GET/failsignup error en signup"}
 {"level":"error","message":" Ruta POST/ error al registrar usuario"}
 {"level":"error","message":"Ruta GET/failsignup error en signup"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}
+{"level":"error","message":"Ruta GET/faillogin error en login"}

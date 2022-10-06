@@ -20,6 +20,14 @@ import routesLogin from '../routes/index.routes.js'
 import routesRegister from '../routes/indexregister.routes.js'
 import routesapi from '../routes/indexapi.routes.js'
 import { engine } from 'express-handlebars';
+import fs from "fs"
+import { schema, normalize } from 'normalizr';
+import util from 'util';
+function print(objeto)
+{
+    console.info(util.inspect(objeto,false,12,true))
+}
+
 
 
 const yargsExecute = yargs(process.argv.slice(2))
@@ -74,6 +82,9 @@ if (args.iscluster == "cluster" && cluster.isPrimary) {
 const expressServer = servidor
 const io = new Server(expressServer);
 
+let ProductosDB = []
+let messagesArray = []
+
 
 app.engine('hbs', engine({
     defaultLayout: path.join(__dirname, '../views/layouts/main.hbs'),
@@ -94,7 +105,46 @@ app.get("/logout", routes.getLogout);
 //  FAIL ROUTE
 app.get("*", routes.failRoute);
 
-B(config.database.dbUrl, (err) => {
+conectarDB(config.database.dbUrl, (err) => {
   if (err) return datosLogin.logger.error("server.js error en conexión de base de datos", err);
   console.log("BASE DE DATOS CONECTADA");
+})
+
+io.on('connection', async socket => {
+    //console.log(`Nuevo usuario conectado ${socket.id}`)
+    socket.on('client:product', async productInfo => {
+        ProductosDB= productInfo
+        //ProductosDB = await qryRead.ReadProductos()
+        io.emit('server:productos', ProductosDB)
+            //console.log('si llegue primero', ProductosDB)
+    })
+    socket.emit('server:productos', ProductosDB)
+        //Socket Mensajes
+    socket.emit('server:mensajes', messagesArray)
+    socket.on('client:menssage', async messageInfo => {
+        let MensajesExistentesFile = await fs.promises.readFile(`Messages/appMensajes.txt`)
+        
+        if(MensajesExistentesFile != '')
+        {
+            messagesArray = JSON.parse(MensajesExistentesFile)
+        }
+        messageInfo.id = messagesArray.length+1
+        messagesArray.push(messageInfo)
+        
+        await fs.promises.writeFile(`Messages/appMensajes.txt`,JSON.stringify(messagesArray))
+        //await qryInsert.InsertMensajes(messageInfo)
+        //messagesArray = await qryRead.ReadMensajes()
+        //normalizar para enviar al front
+        const author = new schema.Entity('author',{},{idAtrribute:'id'})
+        const mensaje = new schema.Entity('mensaje',{author: author},{idAtrribute:"id"})
+        const schemamensajes = new schema.Entity('mensajes',{
+            mensajes:[mensaje]
+        },{idAtrribute:"id"})
+
+        const nomalizePost = normalize({id:'mensajes',mensajes:messagesArray},schemamensajes)
+        //console.log(messagesArray)
+        //print(nomalizePost)
+        io.emit('server:mensajes', nomalizePost)
+            //console.log(messageInfo)
+    })
 })

@@ -16,7 +16,7 @@ const messageInput = document.querySelector('#messageInput')
 let entendimiento=0
 
 //Funciones para Productos
-function renderProductos(productos) {
+/* function renderProductos(productos) {
     fetch('./productos.hbs').then(response => {
         response.text().then((plantilla) => {
             const template = Handlebars.compile(plantilla);
@@ -27,14 +27,14 @@ function renderProductos(productos) {
             imgPool.value = ""
         })
     })
-}
+} */
 
-socket.on('server:productos', productos => {
+/* socket.on('server:productos', productos => {
     renderProductos(productos)
 })
+ */
 
-
-ProductosForm.addEventListener('submit', event => {
+/* ProductosForm.addEventListener('submit', event => {
     event.preventDefault()
 
     const productInfo = {
@@ -44,7 +44,7 @@ ProductosForm.addEventListener('submit', event => {
     }
 
     sendProductos(productInfo)
-})
+}) */
 
 
 function sendProductos(productInfo) {
@@ -57,6 +57,7 @@ function sendMessage(messageInfo) {
 }
 
 function renderMessage(messagesInfo) {
+    console.log("aqui los datos",messagesInfo)
     //se va a desnormalizar
     const author = new normalizr.schema.Entity('author',{},{idAtrribute:'id'})
     const mensaje = new normalizr.schema.Entity('mensaje',{author: author},{idAtrribute:"id"})
